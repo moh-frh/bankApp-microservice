@@ -16,6 +16,8 @@ services:
       - '9999:9999'
     expose:
       - '9999'
+    environment:
+      - DISCOVERY_SERVICE_URL=http://enset-ebank-discovery-service:8761/eureka
     depends_on:
       enset-ebank-discovery-service:
         condition: service_healthy
